@@ -1,0 +1,46 @@
+@@@ Object(객체) @@@
+
+object는 각 value에 이름을 줄 수 있는 것이다.
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        const LuffyInfo = {
+            name: 'Monkey.D.Luffy',
+            age: 19,
+            bloodType: 'F',
+            gender: 'male',
+            isStrong: true
+        }
+        console.log(LuffyInfo.gender);
+        //const안의 값을 바꿀 수 있다. 하지만 const 자체를 바꾸는것은 안된다. 
+        LuffyInfo.gender = 'female';
+        console.log(LuffyInfo.gender);
+
+        //object와 array를 엉켜사용 할 수 있다.  
+        const IronMan = {
+            name: 'Tony Stark',
+            gender: 'male',
+            team: 'Avengers',
+            movie: ['IronMan1', 'IronMan2', 'IronMan3'],
+            favfood: [
+                {
+                    name: 'Kimchi',
+                    taste: false
+                },
+                {
+                    name: 'cheese burger',
+                    taste: true
+                }
+            ]
+        }
+    </script>
+</body>
+
+</html>
