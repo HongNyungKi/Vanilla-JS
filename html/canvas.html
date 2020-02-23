@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> <canvas></canvas> </title>
+</head>
+
+<body>
+    js로 그림을 그릴 수 있는 명령을 제공 할 때, 
+    그 중 canvas api 나 webGL api를 사용하여 그래픽이나 매니메이션을 랜더링 한다.
+    즉, js로 그림을 그릴수 있도록 html 요소로 장소를 마련하는 것.
+
+    - 속성 width, height
+
+    <canvas id="canvas" width="200" height="150"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'rgb(200,0,0)'
+        ctx.fillRect(10, 10, 50, 50)
+    </script>
+</body>
+
+</html>

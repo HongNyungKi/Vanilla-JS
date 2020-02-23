@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> <iframe></iframe> </title>
+</head>
+
+<body>
+    다른 html 페이지를 현재 페이지에 삽입한다.
+    중첩된 브라우저 컨텍스트(프레임)를 표시한다.
+
+    - 속성 name: 프레임의 이름
+
+    - 속성 src: 포함할 문서의 url
+
+    - 속성 width: 프레임의 가로 너비
+
+    - 속성 height: 프레임의 세로 너비
+
+    - allowfullsereen: 전체 화면 모드 사용 여부
+
+    - ramebodrder: 프레임 테두리 사용 여부
+
+    - sandbox: 보안을 위한 읽기 전용으로 삽입
+
+
+    <p>나의 페이지</p>
+    <div>
+        <img src="./img_기본.html" alt="헤로피 사진">
+    </div>
+    <div>
+        <iframe src="https://heropy.blog/2019/05/26/html-elements/" 
+                frameborder="70%"
+                height="400px"
+                style="border: 1px solid red;"
+                ></iframe>
+    </div>
+
+    </div>
+</body>
+
+</html>
