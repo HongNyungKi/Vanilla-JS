@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title> <audio></audio> </title>
+</head>
+
+<body>
+
+    소리 콘텐츠(mp3)를 삽입한다.
+
+    - 속성 src: 음악 파일의 경로를 명시한다.
+    <audio src="./세스리스.mp3"></audio>
+
+    - 속성 autoplay: 사이트 입장시 바로 재생
+    <!-- autoplay가 지정된 경우, preload는 무시됨. -->
+    <audio src="./세스리스.mp3" autoplay></audio>
+    
+    - 속성 controls: 제어 메뉴를 표시
+    <audio src="./세스리스.mp3" autoplay controls></audio>
+
+    - 속성 loop: 재생이 끝나면 다시 처음부터 재생
+    <audio src="./세스리스.mp3" autoplay controls loop></audio>
+
+    - 속성 muted: 음소거 여부
+    <audio src="./세스리스.mp3" autoplay controls loop muted></audio>
+
+    - preload: 페이지가 로드될 때 파일을 로드할지의 지정(힌트제공)
+    <!-- (기본값)메타데이터만 로드 -->
+    <audio src="./세스리스.mp3" autoplay controls loop muted preload="metadata"></audio>
+    <!-- 로드하지 않음. play가 되면 load -->
+    <audio src="./세스리스.mp3" autoplay controls loop muted preload="none"></audio>
+    <!-- 전체 파일 로드. 미리 받아놓는 것 -->
+    <audio src="./세스리스.mp3" autoplay controls loop muted preload="auto"></audio>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>img tag-속성sizes</title>
+</head>
+<body>
+    img tag에서 속성 sizes는 미디어조건과 그 조건에 해당하는 이미지의 '최적화 출력 크기'를 지정한다. 
+    <img
+    srcset="heropy_small.png 400w,
+            heropy_medium.png 700w,
+            heropy_large.png 1000w"
+    sizes="(min-width: 1000px) 500px"
+    src="./heropy.png"
+    alt="HEROPY" />
+    <!-- 뷰포트 너비가 400px 이하일 때 heropy_small.png(400px)가 사용됩니다.
+         뷰포트 너비가 401~700px 일 때 heropy_medium.png(700px)가 사용됩니다.
+         뷰포트 너비가 701~999px 일 때 heropy_large.png(1000px)가 사용됩니다.
+         뷰포트 너비가 1000px 이상일 때 heropy_medium.png(500px)가 사용됩니다. -->
+
+width는 이미지의 ‘출력 크기’만 지정하는 데 반해,
+sizes는 이미지의 ‘출력 크기’ + ‘최적 크기’도 함께 지정하는 개념이다.
+따라서 sizes="500px"이 지정된 첫번째 예제는 500px에 최적화된 이미지로 heropy_medium.png를 사용했고
+이미지 크기도 500px로 설정한 것이죠.
+sizes와 width를 같이 작성할 경우 width가 우선
+</body>
+</html>

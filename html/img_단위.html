@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>img tag 단위</title>
+</head>
+<body>
+    img tag에서 속성 srcest은
+    브라우저에 제시할(사용할) 이미지들과 그 이미지들의 원본 크기를 지정한다. 
+
+    사용방법은, 사용할 이미지를 사이즈 별로 2장 이상 준비하여 , srcset 속성에 작성한다. 
+    이때, 이미지의 크기로 px가 아닌 w 혹은 x 단위를 입력해야 하며, 
+    작은 크기 이미지부터 순서대로 입력해야 한다. 
+    * 브라우저에 의해 어떤 이미지가 사용되건간에 고정된 이미지 크기를 유지하려면 속성width를 추가한다. 
+
+    - 단위 w
+    (width descriptor) 이미지의 원본크기(가로 너비)를 의미한다. 
+    ex) 400*300(px) 크기의 이미지의 w 값은 400w이다. 
+
+    - 단위 x
+    (device pixel descriptor) 이미지의 비율 의도(배수)를 의미한다. 
+    w 단위를 x 단위로 바꿔 사용 할 수 있다. 
+    대부분 w 단위를 사용한다. 
+    
+    예제) 
+    <img 
+    srcset="heropy_small.png 400w,
+            heropy_medium.png 700w,
+            heropy_large.png 1000w"
+    width="400px"
+    src="./heropy.png"
+    alt="헤로피 사진">
+
+    <img 
+    srcset="heropy_small.png 1x,
+            heropy_medium.png 1.75x,
+            heropy_large.png 2.5x"
+    width="500px"
+    src="./heropy.png"
+    alt="헤로피 사진">
+    <!-- 뷰포트 너비가 400px 이하일 때 heropy_small.png(400px)가 사용됩니다.
+         뷰포트 너비가 401~700px 일 때 heropy_medium.png(700px)가 사용됩니다.
+         뷰포트 너비가 701px 이상일 때 heropy_large.png(1000px)가 사용됩니다. -->
+
+         <!-- srcset속성을 활용하지 않고 css로 이미지를 제어 할 경우 -->
+         image {
+            width: 500px;
+            height: 500px;
+            background-image: url("images/heropy_small.png");   
+            background-repeat: no-repeat;
+          }
+          @media (min-width: 401px) {
+            image {
+              background-image: url("images/heropy_medium.png");   
+            }
+          }
+          @media (min-width: 701px) {
+            image {
+              background-image: url("images/heropy_large.png");   
+            }
+          }
+
+
+
+</body>
+</html>
