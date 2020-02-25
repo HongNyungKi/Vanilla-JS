@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <fieldset></fieldset>/ <legend></legend>
+    </title>
+</head>
+
+<body>
+    <h1>같은 목적의 양식을 그룹화(fieldset tag)하여 제목(legend tag)을 설정.</h1>
+    <p>
+        - 속성 disabled: 그룹 내 모든 양식 요소를 비활성화
+
+        - 속성 form: form tag밖에서도 쓸 수 있도록 form tag의 id 속성값
+
+        - 속성 name: 그룹의 이름
+
+    </p>
+    <h2>예제</h2>
+    <form>
+        <fieldset>
+            <legend>
+                Coffee Size
+            </legend>
+            <label>
+                <input type="radio" name="size" value="tall" />
+                Tall
+            </label>
+            <label>
+                <input type="radio" name="size" value="grande" />
+                Grande
+            </label>
+            <label>
+                <input type="radio" name="size" value="venti" />
+                Venti
+            </label>
+        </fieldset>
+    </form>
+</body>
+
+</html>
