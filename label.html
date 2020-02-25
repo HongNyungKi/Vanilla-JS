@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> <label></label> </title>
+</head>
+<body>
+    <h1>라벨 가능 요소(labelable)의 제목(caption)</h1>
+    <h2>for 속성으로 라벨 가능 요소를 참조하거나 콘텐츠로 포함한다.</h2>
+    <h2>라벨 가능 요소: button tag / input tag / progress tag / select tag / textarea tag</h2>
+
+    - 속성 for: 참조할 라벨 가능 요소의 id속성 값
+
+    - label 이 적힌 text를 클릭해도 input type과 같은 기능을 갖는다. 
+    
+    <!-- 라벨 가능 요소를 참조 -->
+    <input type="checkbox" id="user-agreement">
+    <label for="user-agreement">동의하십니까?</label>
+
+    <!-- 라벨 가능 요소를 포함 -->
+    <label><input type="chexkbox" />동의하십니까?</label>
+
+    <!-- 예제 -->
+    <label>
+        검색<input type="search">
+    </label>
+</body>
+</html>

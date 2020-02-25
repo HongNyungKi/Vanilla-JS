@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> <input> </title>
+</head>
+<body>
+    
+<h1>
+    input tag란 사용자에게 입력 받을 데이터 양식이다. 
+</h1>
+<p>
+- 속성 autocomplete:  사용자가 이전에 입력한 값으로 자동 완성 기능의 사용 여부. 
+   --값: on(기본값), off
+* form tag의 속성인 autocomplete은 전체, 이것은 해당하는 input tag에 한해서 이다.
+
+- 속성 autofocus: 페이지가 로드될 때 자동으로 포거스
+* 문서 내에서 하나만 가능하다.  
+
+- 속성 checked: 양식이 선택되었음을 표시한다. 
+* type 속성 값이 radio, checkbox일 경우만 해당한다.
+
+- 속성 disabled: 양식을 비활성화 한다. 
+
+- 속성 form: form tag의 id 속성 값 이다. 
+* 해당 form tag의 후손이 아닐 경우만 해당한다. 즉, form tag밖에 input tag를 써서 활용할 때 필요한 것이다. 
+
+- 속성 list: 참조할 datalist tag 의 id 속성 값 이다. 
+
+- 속성 max: 지정 가능한 최대 값
+* type 속성 값이 number일 경우만 해당한다. min 속성보다 큰 값만 허용한다. 
+
+- 속성 min: 지정 가능한 최소 값
+* type 속성 값이 number일 경우만 해당한다. max속성보다 작은 값만 허용한다. 
+
+- 속성 maxlength: 입력 가능한 최대 문자 수 
+* type 속성 값이 text, email, password, tel, url 일 경우만 해당한다. 
+
+- 속성 multiple: 둘 이상의 값을 입력 할 수 있는지 여부
+* type 속성 값이 email, file일 경우만 해당한다. 
+* type 속성 값이 email일 경우 , 로 구분한다. 
+
+- 속성 name: 양식의 이름이다. 서버로 자료를 보낼 때 이름을 지정하여 보내줘야 한다. 
+
+- 속성 placeholder: 사용자가 입력할 값의 힌트이다. 
+
+- 속성 readonly: 수정 불가한 읽기 전용이다. 
+
+- 속성 step: 유효한 증감 숫자의 간격이다. 
+* type 속성 값이 number, range일 경우만 해당한다. 
+
+- 속성 src: 이미지의 url
+* type속성 값이 image일 경우만 해당한다. 
+
+- 속성 alt: 이미지의 대체 텍스트
+* type속성 값이 image일 경우만 해당한다. 
+
+- 속성 type: 입력 받을 데이터의 종류
+
+- 속성 value: 양식의 초기 값이다. 
+    </p>
+    <h2>
+        input tag의 속성 type(종류)과 값(values)
+    </h2>
+    <p>
+        - 값 bottom: 일반 버튼이다. bottom tag 처럼 사용된다. 
+        * 특정한 기능이 없기 때문에 js로 제어한다.
+
+        - 값 checkbox: 체크박스
+        * 동의 여부 용도로 많이 사용된다. 
+
+        - 값 color: 색상
+
+        - 값 email: 이메일
+
+        - 값 file: 파일
+
+        - 값 hidden: 보이지 않지만 전송할 양식이다. 
+        * value 속성으로 값을 지정한다. 
+
+        - 값 image: 이미지 제출 버튼이다. image tag처럼 사용된다. 
+
+        - 값 number: 숫자
+
+        - 값 password: 비밀(가려지는 양식)
+
+        - 값 radio: 라디오 버튼 
+        * 같은 name 속성 그룹 내 하나만 선택이 가능하다. 
+
+        - 값 range: 범위 컨트롤
+        * min, max, step, value(기본값) 속성 사용
+
+        - 값 reset: 초기화한다. 해당 form tag 범위 내 모든 양식 초기화 이다. 
+
+        - 값 search: 검색
+
+        - 값 submit: 제출 버튼 
+        * 해당 form tag 범위 내 고유한 양식이다. 
+
+        - 값 tel: 전화번호
+
+        - 값 text: 일반 텍스트
+
+        - 값 url: 정대 URL
+    </p>
+    <h3>
+        예제
+    </h3>
+
+<div class="example">
+    <form action="/login" id="login-form" method="GET">
+<input type="email" name="id">
+<input type="password" name="pw">
+<input type="submit" value="로그인">
+<input type="number" value="1234" readonly>
+<input type="number" value="1234" disabled>
+<input type="number" placeholder="숫자를 입력하세요">
+<input type="number" max="8" min="4">
+<input type="number" step="4">
+<input type="checkbox" checked>
+<input type="file" multiple>
+<from>
+<input type="image" src="./img_기본.html" alt="input tag사용하여 이미지 넣기">
+<!-- * 차이점은 제출 버튼으로서의 기능을 갖는다. -->
+</from>
+<input type="radio" name="radio1">
+<input type="radio" name="radio1" checked>
+<input type="radio" name="radio1">
+<form action="~~">
+<input type="text" name="id">
+<input type="password" name="pw">
+<input type="submit" value="로그인">
+<input type="reset" value="초기화">
+</form>
+</form>
+<input type="text" form="login-form" autofocus maxlength="6">
+</div>
+
+</body>
+</html>
