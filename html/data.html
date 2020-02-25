@@ -1,0 +1,12 @@
+data-* 
+
+사용자 정의 데이터 속성을 지정한다. 
+html에 javascript에서 이용할 수 있는 데이터(정보)를 저장하는 용도로 사용한다. 
+
+<div id="me" data-myname="Hong" data-myage="27">홍녕기</div>
+
+<script>
+    const me = documnet.getElementById('me');
+    console.log(me.dataset.myname); //hong
+    console.log(me.dataset.myage); //27
+</script>
