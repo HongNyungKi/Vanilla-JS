@@ -1,0 +1,36 @@
+주의사항2 ex)
+
+<html>
+
+<head>
+    <style>
+        .box-group div:first-child {
+            color: red;
+        }
+
+        /* 1번과 3-1번이 모두 선택 되지 않고, 1번만 선택하기 위해서는 하위 개념인 아닌 자식요소를 선택하는 개념이어야 한다. */
+        .box-group>div:first-child {
+            color: yellowgreen;
+        }
+        
+        /* 만약 3-1이 div 태그가 아니어도 첫번째 자식이라는 개념을 살리기 위해서는  */
+        .box-group :first-child{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box-group">
+        <div>1</div>
+        <div>2</div>
+        <div>3
+            <div>3-1</div>
+            <div>3-2</div>
+            <div>3-3</div>
+        </div>
+    </div>
+</body>
+
+</html>
+

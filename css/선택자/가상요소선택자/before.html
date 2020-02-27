@@ -1,0 +1,40 @@
+가상요소 선택자: css를 통해서 html에 가상의 요소를 생성하여 제공하는 것이다.
+
+가상 요소 선택자 ::before
+특정 요소 (A) 내부의 앞에, 내용(content)을 삽입
+속성 content 를 반드시 삽입할 것!
+
+ex)
+<html>
+
+<head>
+    <style>
+        ul {
+            font-size: 40px;
+        }
+
+        ul li::before {
+            content: "숫자";
+            font-weight: bold;
+            color: red;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+</body>
+
+</html>

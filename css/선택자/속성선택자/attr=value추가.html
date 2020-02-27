@@ -1,0 +1,30 @@
+<!-- 속성 선택자 attr^=value 와 attr$=value
+
+attr=vlaue와 같다, 특정한 속성을 포함하고 있고, 해당하는 속성의 값이 ~~ 속성을 선택하는데 ~~로 시작하는 값 또는 끝나는 값 의 요소를 선택한다. -->
+
+<html>
+
+<head>
+    <style>
+        [class^="btn-"] {
+            font-weight: bold;
+            border-radius: 20px;
+        }
+
+        [class$="success"] {
+            color: green;
+        }
+
+        [class$="danger"] {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn-success">success</button>
+    <button class="btn-danger">danger</button>
+    <button>normal</button>
+</body>
+
+</html>

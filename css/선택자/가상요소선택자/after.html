@@ -1,0 +1,35 @@
+가상요소 선택자: css를 통해서 html에 가상의 요소를 생성하여 제공하는 것이다.
+
+특정 요소 (A) 내부의 뒤에, 내용(content)을 삽입
+속성 content 를 반드시 삽입할 것!
+
+<html>
+
+<head>
+    <style>
+        ul {
+            font-size: 40px;
+        }
+
+        ul li::after {
+            content: url("https://heropy.blog/css/images/vendor_icons/css3.png");
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+가상 클래스 선택자 first-child 와 last-child
+: 특정 요소인 A 가 형제 요소 중 첫번째 요소라면(+마지막이라면) 선택한다.
+모든 요소들 마다 class값을 명시 하기는 현실적으로 어렵이 때문에 이를 활용한다. 
+
+ex)
+
+<html>
+
+<head>
+    <style>
+        .fruits li:first-child {
+            color: red;
+        }
+        .fruits li:last-child{
+            color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="fruits">
+        <li>딸기</li>
+        <li>사과</li>
+        <li>오렌지</li>
+        <li>망고</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+가상 클래스 선택자 nth-child
+: 특정요소 A 가 형제 요소 중 n번째 요소라면 선택한다. (n키워드 사용시 0부터 해석한다.(zero-base))
+
+ex)
+
+<html>
+
+<head>
+    <style>
+        .fruits li:nth-child(1) {
+            color: red;
+        }
+        /* 기본적인 연산을 활용하여 몇번째 요소를 선택할 수 있다. */
+        .fruits li:nth-child(2n){
+            color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="fruits">
+        <li>딸기</li>
+        <li>사과</li>
+        <li>망고</li>
+        <li>수박</li>
+    </ul>
+</body>
+
+</html>

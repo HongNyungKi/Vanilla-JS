@@ -1,0 +1,42 @@
+nth of type
+: 특정 요소 A 의 타입(태그 이름)과 동일한 타입인 형제 요소 중 A가 n번째 요소라면 선택
+
+<html>
+<style>
+    .fruits {
+        font-size: 40px;
+    }
+
+    .fruits p:nth-child(2) {
+        color: yellowgreen;
+    }
+
+    /* p태그의 두번째 요소인 망고를 선택하고자 했지만, p태그 자체가 첫번째 자식이 아니기 때문에 순서대로 따지면 사과가 선택되는 것이다. */
+
+    /* p태그의 첫번째 type인 사과 고르기 */
+    .fruits p:nth-of-type(1) {
+        color: red;
+    }
+
+/* 거꾸로 해석하는 것이 좋다. 첫번째 요소를 찾았는데 .hero 가 없으니 아무것도 찾지 못한것이다. */
+    .Avengers .hero:nth-of-type(1) {
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="fruits">
+        <div>딸기</div>
+        <p>사과</p>
+        <p>망고</p>
+        <span>오렌지</span>
+    </div>
+    <ul class="Avengers">
+        <li>아이언맨</li>
+        <li class="hero">캡틴아메리카</li>
+        <li>헐크</li>
+        <li class="hero">토르</li>
+    </ul>
+</body>
+
+</html>
