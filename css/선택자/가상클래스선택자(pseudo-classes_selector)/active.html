@@ -1,0 +1,27 @@
+가상 클래스 선택자 :active
+: A를 마우스로 클릭하는 동안에만 A 를 선택한다.
+
+ex) A:active
+
+<html>
+
+<head>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            transition: 0.4s;
+        }
+        .box:active{
+            width: 200px;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

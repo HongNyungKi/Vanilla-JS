@@ -1,0 +1,16 @@
+인접 형제 선택자(Adjacent Sibling Combonator)
+: A 의 다음 형제 요소인 B 하나만 선택한다. 
+<!-- 형제요소는 같은 부모를 공유하는 요소이다. -->
+
+ex) class값이 orange인 요소의 다음 형제 요소인 li 요소를 선택.
+<style>
+    .orange+li{
+        color: red;
+    }
+</style>
+<ul>
+    <li>딸기</li>
+    <li class="orange">오렌지</li>
+    <li>수박</li>
+    <li>메론</li>
+</ul>

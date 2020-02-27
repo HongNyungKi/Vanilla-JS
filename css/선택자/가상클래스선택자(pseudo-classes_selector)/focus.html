@@ -1,0 +1,29 @@
+가상 클래스 선택자 :focus
+: A가 포커스 된 동안에만 A선택(대화형 컨텐츠에서만 사용이 가능하다. )
+
+ex) A:focus
+
+<html>
+
+<head>
+    <style>
+        input {
+            width: 100px;
+            outline: none;
+            border: 1px solid lightgray;
+            padding: 5px 10px;
+            transition: 0.4s;
+        }
+
+        input:focus {
+            border-color: red;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text">
+</body>
+
+</html>
