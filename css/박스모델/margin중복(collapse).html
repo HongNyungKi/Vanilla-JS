@@ -1,0 +1,37 @@
+마진 중복(병합, collapse)
+: 마진의 특정 값들이 '중복'되어 합쳐지는 현상
+1. 형제 요소들의 margin-top과 margin-bottom이 만났을 때
+2. 부모 요소의 margin-top과 자식요소의 margin-top이 만났을 때(겹쳐잇으면 자식요소의 top이 부모요소의 top이 가진걸 그대로 본인이 가진것 처럼 인식함)
+3. 부모 요소의 margin-bottom과 자식 요소의 margin-bottom이 만났을 때
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <style>
+        .parent {
+            width: 500px;
+            height: 400px;
+            background-color: cyan;
+            margin-top: 50px;
+        }
+        .child{
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            float: left;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+</body>
+
+</html>

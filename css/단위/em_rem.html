@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>
+        em: 자기 자신의 font-size에 영향을 받는다.
+        rem: html에 지정된 font-size만의 영향을 받는다.
+    </title>
+    <style>
+        html {
+            font-size: 10px;
+        }
+
+        body * {
+            border: 2px solid;
+        }
+
+        .container {
+            /* width: 600px; */
+            width: 60em;
+            /* font-size의 60배라는 의미이다.  */
+            font-size: 15px;
+
+        }
+
+        .parent {
+            /* width: 300px; */
+            /* 부모에게 상속받은 font-size가된다. */
+            width: 30em;
+            font-size: 2em;
+        }
+
+        .child {
+            /* width: 150px; */
+            font-size: 2em;
+            width: 20rem;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        Container
+        <div class="parent">
+            Parent
+            <div class="child">Child1</div>
+            <div class="child">Child2</div>
+        </div>
+    </div>
+</body>
+
+</html>
