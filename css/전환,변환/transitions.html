@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>
+        transitions: CSS속성의 전환 효과를 지정한다. 즉, CSS속성의 시작과 끝을 지정하여 중간 값을 매니메이션 처리해주는 것이다.
+
+        - 속성값(기본값): trastiotion-property(전환효과를 사용할 속성 이름)(all)
+        <!-- 적용하지 않을 시 전체 적용임 -->
+        - 속성값(기본값): trastiotion-duration(전환효과의 지속시간 설정)(0s)
+        <!-- 1x=1000ms 단위도 사용가능 -->
+        - 속성값(기본값): trastiotion-timing-fuction(타이밍 함수 지정)(ease)
+        <!-- 빠르게시작해서~느리게 끝나는 것처럼 여러가지를 지정 할 수 있다. easing function 검색참고 -->
+        - 속성값(기본값): trastiotion-delay(전화효과의 대기시간 설정)(0s)
+
+    </title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            margin: 50px;
+            /* transition은 바뀌기 전 상태에 추가하는 것이다. */
+            /*개별속성 사용시
+            transition-property: width, background-color;
+            transition-duration: 1s; */
+            /* 단축속성 사용시 */
+            /* transition: width 1s, background-color 3s; */
+            /* transition: 3s steps(4); */
+            transition: 2s 2s;
+            /* 단축속성 사용시 뒤의 시간이 delay이다. */
+
+
+        }
+
+        .box:hover {
+            width: 300px;
+            background-color: dodgerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
