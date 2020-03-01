@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>
+        font: 글자 관련 속성들을 지정
+
+        <!-- 개별 속성으로 사용하기 -->
+        - 속성 값: font-style(글자 기울기)
+        - 속성 값: font-weight(글자 두께)
+        - 속성 값: font-size(글자 크기)
+        - 속성 값: line-height(줄 높이)
+        <!-- reset.css적용시 1 -->
+        - 속성 값: font-family(글꼴)
+
+        <!-- 단축 속성으로 사용하기 -->
+        font: 기울기 두께 크기 / 줄높이 글꼴;
+        <!-- 줄높이도 px단위로 사용할 수 있기 때문에 / 로 구분! -->
+        <!-- 또한, 단축속성을 사용하기 위해서는 반드시 font-size(글자크기)와 font-family(글꼴)가 포함되어야 한다. -->
+    </title>
+    <style>
+        /* 단축 속성 예제 */
+        .box {
+            font: italic bold 20px / 1.5 sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">Avengser is my fav</div>
+</body>
+
+</html>

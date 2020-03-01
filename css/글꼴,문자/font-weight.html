@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>
+        font-weight: 글자의 두께를 지정한다.
+        <!-- font의 개별속성이다. -->
+
+        - 속성 값: normal(기본 글자 두께-400)
+        - 속성 값: bold(두껍게-700)
+        - 속성 값: bolder(부모 요소보다 더 두껍게)
+        <!-- bold보다 두껍다는 개념이 아님 -->
+        - 속성 값: lighter(부모요소보다 더 얇게)
+        - 속성 값: 숫자(100~900의 100단위 숫자9개)
+    </title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>일반적인 두께의 이름</h1>
+    <ul>
+        <li>100: thin(hairline)</li>
+        <li>200: extra light(ultra light)</li>
+        <li>300: light</li>
+        <li>400: normal</li>
+        <li>500: medium</li>
+        <li>600:semi bold(demi bold)</li>
+        <li>700: bold</li>
+        <li>800: extra bold</li>
+        <li>900: black(heavy)</li>
+    </ul>
+    <h2>상대적 두께: bolder나 lighter를 사용할 경우 상위요소에게 상속받은 값에서 다음과 같이 계산됨</h2>
+    <ul>
+        <li>상속값 bolder lighter</li>
+        <li>100 400 100</li>
+        <li>200 400 100</li>
+        <li>300 400 100</li>
+        <li>400 700 100</li>
+        <li>500 700 100</li>
+        <li>600 900 400</li>
+        <li>700 900 400</li>
+        <li>800 900 700</li>
+        <li>900 900 700</li>
+    </ul>
+    <h1>숫자 값과 두께의 불일치: 글꼴의 정확한 두께를 숫자로 표현할 수 없는 경우</h1>
+    예를 들어 normal과 bold만 지원하는 글꼴일 경우, 100~500은 normal을 의미하고 600~900은 bold를 의미한다.
+</body>
+
+</html>
