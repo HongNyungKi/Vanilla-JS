@@ -1,0 +1,22 @@
+attr=value
+: 특정한 속성을 포함하고 있고, 해당하는 속성의 값이 ~~ 속성을 선택하겠다 라는 것이다.
+
+<html>
+
+<head>
+    <style>
+        [type="password"] {
+            opacity: 0.5;
+            color: red;
+        }
+        /* [type=password]로 ""은 생략이 가능하다.  */
+    </style>
+</head>
+
+<body>
+    <input type="text" value="hong">
+    <input type="password" value="1234">
+    <input type="text" value="disabled text" disabled>
+</body>
+
+</html>

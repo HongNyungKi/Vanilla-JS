@@ -1,0 +1,24 @@
+부정 선택자(negation selector) not
+: B 가 아닌 A 선택
+
+ex) A:not(B) 즉, A를 찾는데 B를 빼고 찾는것
+
+<html>
+
+<head>
+    <style>
+        .fruits li:not(.sweet) {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="fruits">
+        <li>딸기</li>
+        <li class="sweet">망고</li>
+        <li>오렌지</li>
+    </ul>
+</body>
+
+</html>

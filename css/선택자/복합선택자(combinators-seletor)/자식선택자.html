@@ -1,0 +1,27 @@
+자식 선택자(Child Combinator)
+: A의 자식 요소인 B를 선택한다. 
+
+ex) ul 태그 안에 있는 클래스 값이 orange인 요소 선택하기
+ul > .orange {
+    color: red;
+}
+
+<!DOCTYPE html>
+<head>
+    <style>
+        ul > .orange{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <div class="orange">안녕 세상아</div>
+        <li>hello</li>
+        <li class="orange">world</li>
+    </ul>
+    <div>
+        <li class="orange">world</li>
+    </div>
+</body>
+</html>

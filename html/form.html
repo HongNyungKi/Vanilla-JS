@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title> <form></form> </title>
+</head>
+
+<body>
+    
+
+<h1>
+    웹 서버에 정보를 제출하기 위한 양식 범위를 정의 한다.
+</h1>
+<h2>
+    form tag 는 다른 form tag를 자식요소로 포함할 수 없다.
+</h2>
+<p>
+- 속성 action: 전송한 정보를 처리할 웹페이지의 url
+
+- 속성 autocomplete: 사용자가 이전에 입력한 값으로 자동 완성 기능을 사용할 것인지 여부
+   __ 값: on(기본값), off
+
+- 속성 method: 서버로 전송할 http 방식
+    __값: GET(기본값), POST
+    * GET: 입력한 정보가 주소에 노출된다. / POST: 입력한 정보가 주소에 노출되지 않는다. 
+
+- 속성 name: 고유한 양식의 이름
+
+- 속성 novalidate: 서버로 전송시 양식 데이터의 유효성을 검사하지 않도록 지정
+* 예를 들어 input type이 email인 경우 email양식 대로 적지 않아도, 경고 메세지가 나오지 않는다. 
+  때문에, 특수한 상황이나 테스트 단계에서 많이 사용한다. 
+
+- 속성 target: 서버로 전송 후 응답받을 방식을 지정(정보를 받은 웹페이지가 어디에 열리는지 지정)
+    __값: _self(기본값), _blank
+</p>
+
+<h1>예제</h1>
+
+
+<div class="example">
+    <form action="/login" method="POST" autocomplete="off" novalidate target="_blank">
+<input type="email" name="email">
+<input type="password" name="password">
+<button type="submit">로그인</button>
+</form>
+</div>
+
+</body>
+
+</html>

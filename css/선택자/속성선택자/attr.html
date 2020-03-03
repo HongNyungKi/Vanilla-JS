@@ -1,0 +1,23 @@
+[attr]
+예를 들어 <div class="~~"></div> 가 있다.
+이때 [class] 라고 적으면 속성 값이 어떻든 간에 class 라는 속성이 있으면 선택하겠다는 것이다.
+하여, 하나의 선택자로서의 역할을 한다.
+
+<html>
+
+<head>
+    <style>
+        [disabled] {
+            opacity: 0.5;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" value="hong">
+    <input type="password" value="1234">
+    <input type="text" value="disabled text" disabled>
+</body>
+
+</html>

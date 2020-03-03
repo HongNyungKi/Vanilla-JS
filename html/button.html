@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> <button></button> </title>
+</head>
+<body>
+    <h1>선택 가능한 버튼을 지정한다.</h1>
+
+    <p>
+        - 속성 autofocus: 페이지가 로드 될 때 자동으로 포커스된다.(문서내 고유해야 한다.)
+
+        - 속성 disabled: 버튼을 비활성화 한다. 
+
+        - 속성 form: form tag의 id 속성 값. (button이 form tag내부에 있지 않을때,)
+
+        - 속성 name: 폼 데이터와 함께 전송되는 버튼의 이름
+
+        - 속성 type: 버튼의 타입. 
+            __값: button / reset / submit
+    </p>
+
+    <h2>예제</h2>
+
+    <!-- 같은 초기화 기능의 다른 표현 -->
+    <input type="reset" value="초기화">
+    <button type="reset">초기화</button>
+
+    <!-- button tag에 js를 활용하여 기능 넣기 -->
+    <button onclick="doit()">클릭하세요!</button>
+
+    <script>
+        function doit(){
+            alert('클릭했습니다.')
+        }
+    </script>
+</body>
+</html>

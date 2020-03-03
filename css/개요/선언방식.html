@@ -1,0 +1,28 @@
+CSS 선언방식
+
+- 인라인(in-line) 방식
+: html 요소(태그)의 style 속성에 직접 작성 하는 방식
+ex) <div style="color: red;">hello</div>
+
+- 내장(embedded) 방식
+: html의 <style></style> 안에 작성하는 방식
+ex) <head>
+    <style>
+        div{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>hello</div>
+</body>
+
+- 링크(link)방식
+: html의 <link rel="stylesheet" href="">를 이용하여 외부 문서로 css를 불러와 적용하는 방식
+즉, html에서 css를 가져오는 것.
+병렬호출 방식이다.
+
+- @import방식
+: css @import를 이용하여 외부 문서로 css를 불러와 적용하는 방식
+즉, css에서 css를 가져오는 것.
+직렬호출 방식이다.

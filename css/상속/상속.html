@@ -1,0 +1,27 @@
+상속(inheritance)
+
+상속되는 속성들(properties): 주로 text다룬다. 
+ex) 
+- font(size, weight, style, line-heigt, font-family)
+- color
+- text-align 
+- text-indent
+- text-decoration
+- letter-sapcing 
+- opacity
+     등등...
+     
+- 일반적인 상속
+
+- 강제 상속
+<style>
+    .parent{
+        position: absolute; /*상속되지 않는 속성과 값*/
+    }
+    .child{
+        position: inherit; /* 강제 상속받아 position:absolute; 와 동일 */
+    }
+</style>
+<div class="parent">
+    <div class="child"></div>
+</div>
