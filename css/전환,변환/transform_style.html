@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>
+        속성transform의 변환속성인 style: 3d변환 요소의 자식 요소도 3d변환을 사용할지의 설정
+        - 속성값(기본값): flat(자식 요소의 3d변환을 사용하지 않음)
+        - 속성값: preserve-3d: 자식 요소의 3d변환을 사용함
+    </title>
+    <style>
+        .perspective {
+            padding: 70px;
+            width: 200px;
+            /* 크기를 맞춰주는 것이 좋다 */
+            perspective: 500px;
+        }
+
+        .grand-parent {
+            width: 200px;
+            border: 3px solid gray;
+            transform: rotateX(-45deg);
+            transform-style: preserve-3d;
+        }
+
+        .parent {
+            width: 200px;
+            border: 3px solid blue;
+            transform: rotateY(45deg);
+            transform-style: preserve-3d;
+        }
+
+        img {
+            width: 200px;
+            border: 3px solid lightpink;
+            transform: rotateX(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="perspective">
+        <div class="grand-parent">
+            <div class="parent">
+                <img src="https://image.aladin.co.kr/product/18455/85/cover500/f382534458_1.jpg" alt="아이먼맨">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

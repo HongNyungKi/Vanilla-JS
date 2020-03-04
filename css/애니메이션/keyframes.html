@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>
+        @keyframes : 2개 이상의 애니메이션 중간 상태(프레임)를 지정한다.
+
+        @keyframes 애니메이션 이름{
+        0%{속성:값;}
+        50%{속성:값;}
+        100%{속성:값;}
+        }
+    </title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            border-radius: 10px;
+        }
+
+        .box:hover {
+            animation: my-animation 1s infinite alternate;
+        }
+
+        @keyframes my-animation {
+            0% {
+                width: 100px;
+                background-color: tomato;
+            }
+
+            75% {
+                width: 500px;
+                background-color: dodgerblue;
+            }
+
+            100% {
+                width: 300px;
+                background-color: yellowgreen;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

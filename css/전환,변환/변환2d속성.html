@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>
+        transform: 2d 변형 효과에 대하여
+
+        - translate(이동):
+        translate(x, y) / translateX(x) / translateY(y)
+        <!-- 단순 배치의 목적이면 position이 적합하다. 하지만, 실시간 위치변동이 이루어진다면 translate를 사용할 것. -->
+
+        - scale(확대,축소):
+        scale(x, y) / scaleX(x) / scaley(y)
+        <!-- 배수의 단위로 입력한다. ex) 1.5 -->
+
+        - rotate(회전):
+        rotate(degree)
+        <!-- 각도를 의미하는 단위인 deg를 써서 입력한다. ex) rotate(45deg) -->
+
+        - skew(비틀기,기울기):
+        skew(x-deg, y-deg) / skewX(x-deg) / skewY(y-deg)
+        <!-- 각도를 의미하는 단위인 deg를 써서 입력한다. ex) rotate(45deg) -->
+
+        - matrix(상위의4개를아우르는것)
+    </title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            margin: 50px;
+            /* transform: rotate(45deg); */
+            transition: 1s;
+        }
+
+        .box:hover {
+            /* transform: translate(30px, 30px); */
+            /* transform: scale(1.5); */
+            transform: skewY(-35deg) scale(1.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">123</div>
+</body>
+
+</html>
