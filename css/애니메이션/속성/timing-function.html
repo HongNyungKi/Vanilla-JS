@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <title>
+        animation-timing-function: 타이밍 함수(애니메이션 효과를 계산하는 방법)지정
+
+        ease - 처음과 끝을 부드럽게 (기본값)
+        linear - 등속운동
+        ease-in - 처음을 느리게
+        ease-out - 마지막을 느리게
+        ease-in-out - 처음과 마지막을 느리게 준다.
+        step-start - 시작하는 지점에 스텝을 끊어준다.
+        step-end - 끝나는 시점에 스텝을 끊어준다.
+    </title>
+    <style>
+        .box {
+            width: 150px;
+            height: 100px;
+            border-radius: 10px;
+            margin: 10px;
+            color: white;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box1 {
+            background-color: tomato;
+        }
+
+        .box2 {
+            background-color: dodgerblue;
+        }
+
+        .box3 {
+            background-color: yellowgreen;
+        }
+
+        .box1:hover {
+            animation: size-up 1s 4 alternate linear 0s;
+            /* animation-timing-function: linear; */
+            /* animation-delay: 0s; */
+        }
+
+        .box2:hover {
+            animation: size-up 1s infinite alternate ease-out 1s;
+            animation-delay: 1s;
+        }
+
+        .box3:hover {
+            animation: size-up 1s 2 alternate ease -1s;
+            animation-delay: -1s;
+            /* 1초가 지난 상태부터 시작되는것이다.(생략개념) */
+        }
+
+        @keyframes size-up {
+            0% {
+                width: 150px;
+            }
+
+            100% {
+                width: 500px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">0s</div>
+    <div class="box box2">1s</div>
+    <div class="box box3">-1s</div>
+</body>
+
+</html>
