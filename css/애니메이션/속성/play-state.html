@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>
+        animation-play-state: 애니메이션의 재생과 정지를 설정
+
+        - 기본값: running(애니메이션을 동작)
+        - 속성값: paused(애니메이션 동작을 정지)
+    </title>
+    <style>
+        body {
+            padding: 30px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: move 3s linear infinite alternate;
+        }
+
+        .box:hover {
+            animation-play-state: paused;
+            background: dodgerblue;
+        }
+
+        .box::before {
+            content: "ruuning";
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* .box인 요소에 hover가 되면 before기능이 어떻게 될 것인지 */
+        .box:hover::before {
+            content: "paused";
+        }
+
+        @keyframes move {
+            0% {
+                width: 150px;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

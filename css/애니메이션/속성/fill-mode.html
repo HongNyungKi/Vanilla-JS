@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>
+        animation-fill-mode: 애니메이션의 전후 상태(위치)를 정의해 주는 속성이다.
+
+        - 기본값: none(기존위치-애니메이션 시작 위치로 이동-동작-기존위치에서 끝)
+        - 속성값: forwards(기존위치-애니메이션 시작 위치로 이동-동작-애니메이션끝위치에서 끝)
+        - 속성값: backwords(기존위치-동작-기존위치에서 끝)
+        - 속성값: both(애니메이션 시작위치에서 시작-동작-애니메이션 끝 위치에서 끝)
+    </title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            border-radius: 10px;
+            margin: 30px;
+            animation: move 2s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(100px, 100px);
+                background: dodgerblue;
+            }
+
+            100% {
+                transform: translate(300px, 100px);
+                background: yellowgreen;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
