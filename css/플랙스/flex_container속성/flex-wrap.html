@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title>
+        flex-wrap: items의 여러 줄 묶음(줄 바꿈)을 설정한다.
+
+
+        - 기본값: nowrap(한줄에 표시)
+        - 속성값: wrap(items를 여러 줄로 묶음)
+        - 속성값: wrap-reverse(items를 wrap의 역 방향으로 여러줄로 묶음)
+    </title>
+    <style>
+        .container {
+            width: 300px;
+            height: 150px;
+            border: 2px solid red;
+            display: inline-flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            width: 110px;
+            height: 50px;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+</body>
+
+</html>

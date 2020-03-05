@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>
+        flex container의 속성 flex-direction: items의 주 축(main-axis)을 설정한다.
+        - 기본값: row(items를 수평축으로 표시)
+        - 속성값: row-reverse(items를 row의 반대 축으로 표시)
+        - 속성값: column(items를 수직축으로 표시)
+        - 속성값: column-reverse(items를 column의 반대축으로 표시)
+    </title>
+    <style>
+        .container {
+            width: 300px;
+            height: 150px;
+            border: 2px solid red;
+            display: inline-flex;
+            /* flex-direction: row-reverse; */
+            flex-direction: column;
+        }
+
+        .item {
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+</body>
+
+</html>

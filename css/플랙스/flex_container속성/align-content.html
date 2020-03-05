@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>
+        align-content: 교차 축(cross-axis)의 정렬 방법을 설정한다.
+        단, flex-wrap속성을 통해 items가 2줄 이상이며, 여백이 있을 경우만 사용할 수 있다.
+        <!-- items가 한 줄일 경우 align-items 속성을 사용 -->
+
+        - 기본값: stretch(container의 교차축을 채우기 위해 items를 늘림)
+        - 속성값: flex-start(Items를 시작점(flex-start)으로 정렬)
+        - 속성값: flex-end(Items를 끝점(flex-end)으로 정렬)
+        - 속성값: center(Items를 가운데 정렬)
+        - 속성값: space-between
+        - 속성값: space-around
+    </title>
+    <style>
+        .container {
+            width: 300px;
+            height: 500px;
+            border: 2px solid red;
+            display: inline-flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* align-content: stretch; */
+            /* 교차 축에 해당하는 너비(속성 width 혹은 height)가 값이 auto(기본값)일 경우 교차 축을 채우기 위해 자동으로 늘어납니다. */
+            align-content: stretch;
+        }
+
+        .item {
+            width: 110px;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+</body>
+
+</html>
